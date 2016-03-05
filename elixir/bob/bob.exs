@@ -3,7 +3,7 @@ defmodule Bob do
     cond do
       String.ends_with?(input, "?") -> "Sure."
       String.strip(input) == "" -> "Fine. Be that way!"
-      String.upcase(input) == input && String.match?(input, ~r/\p{L}/) -> "Whoa, chill out!"
+      String.upcase(input) == input and String.match?(input, ~r/\p{L}/) -> "Whoa, chill out!"
       true -> "Whatever."
     end
   end
